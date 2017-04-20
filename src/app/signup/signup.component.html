@@ -1,22 +1,32 @@
 <div class="col-md-6 col-md-offset-3">
   <legend><h2>Register</h2></legend>
-  <form novalidate #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+  <form novalidate #f="ngForm" (ngSubmit)="f.valid && onSubmit(f.value)">
     <!--<div>-->
-      <!--<pre>{{f.value | json}}</pre>-->
+    <!--<pre>{{f.value | json}}</pre>-->
     <!--</div>-->
     <div ngModelGroup="name">
       <div class="form-group">
         <label for="firstname">First Name</label>
-          <div class="input-group">
+        <div class="input-group">
                             <span class="input-group-addon">
                                 <i class="glyphicon glyphicon-user"></i>
                             </span>
-            <input ngModel
-                   type="text"
-                   class="form-control"
-                   id="firstname"
-                   name="firstname"
-                   placeholder="First name" autofocus/>
+          <input ngModel
+                 type="text"
+                 class="form-control"
+                 id="firstname"
+                 name="firstName"
+                 #firstName="ngModel"
+                 placeholder="First name" autofocus required minlength="2"/>
+        </div>
+        <div class="err-msg-color"
+             *ngIf="firstName.errors && (firstName.dirty || firstName.touched || f.submitted || f.valid)">
+          <p *ngIf="firstName.errors?.required">
+            FirstName is required
+          </p>
+          <p *ngIf="firstName.errors?.minlength">
+            FirstName must have at least {{firstName.errors.minlength.requiredLength}} characters
+          </p>
         </div>
       </div>
       <div class="form-group">
@@ -25,13 +35,13 @@
                               <span class="input-group-addon">
                                     <i class="glyphicon glyphicon-user"></i>
                               </span>
-            <input ngModel
-                   type="text"
-                   class="form-control"
-                   id="lastname"
-                   name="lastname"
-                   placeholder="Last name"/>
-          </div>
+          <input ngModel
+                 type="text"
+                 class="form-control"
+                 id="lastname"
+                 name="lastName"
+                 placeholder="Last name"/>
+        </div>
       </div>
     </div>
     <div class="form-group">
@@ -40,13 +50,13 @@
                             <span class="input-group-addon">
                                 <i class="glyphicon glyphicon-envelope"></i>
                             </span>
-          <input ngModel
-                 type="email"
-                 id="email"
-                 name="email"
-                 class="form-control"
-                 placeholder="Email"/>
-        </div>
+        <input ngModel
+               type="email"
+               id="email"
+               name="email"
+               class="form-control"
+               placeholder="Email"/>
+      </div>
     </div>
     <div class="form-group">
       <label for="username">UserName</label>
@@ -54,13 +64,20 @@
                             <span class="input-group-addon">
                                 <i class="glyphicon glyphicon-user"></i>
                             </span>
-          <input ngModel
-                 type="text"
-                 id="username"
-                 name="username"
-                 class="form-control"
-                 placeholder="Username"/>
-        </div>
+        <input ngModel
+               type="text"
+               id="username"
+               name="userName"
+               #userName="ngModel"
+               class="form-control"
+               placeholder="Username" required/>
+      </div>
+      <div class="err-msg-color"
+           *ngIf="userName.errors && (userName.dirty || userName.touched || f.submitted || f.valid)">
+        <p *ngIf="userName.errors?.required">
+          userName is required
+        </p>
+      </div>
     </div>
     <div ngModelGroup="password">
       <div class="form-group">
@@ -69,29 +86,42 @@
                             <span class="input-group-addon">
                                 <i class="glyphicon glyphicon-lock"></i>
                             </span>
-            <input ngModel
-                   type="password"
-                   class="form-control"
-                   name="password"
-                   id="password"
-                   placeholder="Password"/>
-          </div>
+          <input ngModel
+                 type="password"
+                 class="form-control"
+                 name="password"
+                 id="password"
+                 #password="ngModel"
+                 placeholder="Password" required/>
+        </div>
+        <div class="err-msg-color"
+             *ngIf="password.errors && (password.dirty || password.touched || f.submitted || f.valid)">
+          <p *ngIf="password.errors?.required">
+            password is required
+          </p>
+        </div>
       </div>
       <div class="form-group">
         <label for="vpassword">Confirm Password</label>
 
-          <div class="input-group">
+        <div class="input-group">
                             <span class="input-group-addon">
                                 <i class="glyphicon glyphicon-lock"></i>
                             </span>
-            <input ngModel
-                   type="password"
-                   name="vpassword"
-                   class="form-control"
-                   id="vpassword"
-                   placeholder="Verify Password"/>
-          </div>
-
+          <input ngModel
+                 type="password"
+                 name="vpassword"
+                 class="form-control"
+                 id="vpassword"
+                 #vpassword="ngModel"
+                 placeholder="Verify Password" required/>
+        </div>
+        <div class="err-msg-color"
+             *ngIf="vpassword.errors && (vpassword.dirty || vpassword.touched || f.submitted || f.valid)">
+          <p *ngIf="vpassword.errors?.required">
+            Confirm password is required
+          </p>
+        </div>
       </div>
     </div>
 
