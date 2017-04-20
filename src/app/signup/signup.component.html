@@ -54,8 +54,15 @@
                type="email"
                id="email"
                name="email"
+               #email="ngModel"
                class="form-control"
-               placeholder="Email"/>
+               placeholder="Email" appValidateEmail/>
+      </div>
+      <div class="err-msg-color"
+           *ngIf="email.errors && (email.dirty || email.touched || f.submitted || f.valid)">
+        <p *ngIf="email.errors?.validateEmail">
+          Please enter a valid email address
+        </p>
       </div>
     </div>
     <div class="form-group">
