@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {IUserSignUp} from '../shared/interfaces';
 
 @Component({
   selector: 'app-signup',
@@ -10,6 +11,10 @@ export class SignupComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSubmit(value: IUserSignUp) {
+    console.log(value);
   }
 
 }

@@ -1,3 +1,103 @@
-<p>
-  signup works!
-</p>
+<div class="col-md-6 col-md-offset-3">
+  <legend><h2>Register</h2></legend>
+  <form novalidate #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+    <!--<div>-->
+      <!--<pre>{{f.value | json}}</pre>-->
+    <!--</div>-->
+    <div ngModelGroup="name">
+      <div class="form-group">
+        <label for="firstname">First Name</label>
+          <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-user"></i>
+                            </span>
+            <input ngModel
+                   type="text"
+                   class="form-control"
+                   id="firstname"
+                   name="firstname"
+                   placeholder="First name" autofocus/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <div class="input-group">
+                              <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-user"></i>
+                              </span>
+            <input ngModel
+                   type="text"
+                   class="form-control"
+                   id="lastname"
+                   name="lastname"
+                   placeholder="Last name"/>
+          </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-envelope"></i>
+                            </span>
+          <input ngModel
+                 type="email"
+                 id="email"
+                 name="email"
+                 class="form-control"
+                 placeholder="Email"/>
+        </div>
+    </div>
+    <div class="form-group">
+      <label for="username">UserName</label>
+      <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-user"></i>
+                            </span>
+          <input ngModel
+                 type="text"
+                 id="username"
+                 name="username"
+                 class="form-control"
+                 placeholder="Username"/>
+        </div>
+    </div>
+    <div ngModelGroup="password">
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-lock"></i>
+                            </span>
+            <input ngModel
+                   type="password"
+                   class="form-control"
+                   name="password"
+                   id="password"
+                   placeholder="Password"/>
+          </div>
+      </div>
+      <div class="form-group">
+        <label for="vpassword">Confirm Password</label>
+
+          <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-lock"></i>
+                            </span>
+            <input ngModel
+                   type="password"
+                   name="vpassword"
+                   class="form-control"
+                   id="vpassword"
+                   placeholder="Verify Password"/>
+          </div>
+
+      </div>
+    </div>
+
+    <div class="form-group">
+      <!--<button type="submit" class="btn btn-primary" [disabled]="f.invalid">Sign up</button>-->
+      <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Sign up</button>
+    </div>
+  </form>
+</div>
