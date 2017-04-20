@@ -1,31 +1,33 @@
 <div class="col-md-6 col-md-offset-3">
   <legend><h2>Register</h2></legend>
-  <form novalidate #f="ngForm" (ngSubmit)="f.valid && onSubmit(f.value)">
+  <form [formGroup]="signUpForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm.value)"
+        novalidate>
     <!--<div>-->
     <!--<pre>{{f.value | json}}</pre>-->
     <!--</div>-->
-    <div ngModelGroup="name">
+    <div formGroupName="name">
       <div class="form-group">
         <label for="firstname">First Name</label>
         <div class="input-group">
                             <span class="input-group-addon">
                                 <i class="glyphicon glyphicon-user"></i>
                             </span>
-          <input ngModel
+          <input formControlName="firstName"
                  type="text"
                  class="form-control"
                  id="firstname"
-                 name="firstName"
-                 #firstName="ngModel"
-                 placeholder="First name" autofocus required minlength="2"/>
+                 placeholder="First name" autofocus/>
         </div>
         <div class="err-msg-color"
-             *ngIf="firstName.errors && (firstName.dirty || firstName.touched || f.submitted || f.valid)">
-          <p *ngIf="firstName.errors?.required">
+             *ngIf="signUpForm.get('name').get('firstName').errors &&
+             (signUpForm.get('name').get('firstName').dirty ||
+             signUpForm.get('name').get('firstName').touched || signUpForm.submitted || signUpForm.valid)">
+          <p *ngIf="signUpForm.get('name').get('firstName').hasError('required')">
             FirstName is required
           </p>
-          <p *ngIf="firstName.errors?.minlength">
-            FirstName must have at least {{firstName.errors.minlength.requiredLength}} characters
+          <p *ngIf="signUpForm.get('name').get('firstName').hasError('minLength')">
+            FirstName must have at least
+            {{signUpForm.get('name').get('firstName').errors.minlength.requiredLength}} characters
           </p>
         </div>
       </div>
@@ -35,11 +37,10 @@
                               <span class="input-group-addon">
                                     <i class="glyphicon glyphicon-user"></i>
                               </span>
-          <input ngModel
+          <input formControlName="lastName"
                  type="text"
                  class="form-control"
                  id="lastname"
-                 name="lastName"
                  placeholder="Last name"/>
         </div>
       </div>
@@ -50,17 +51,19 @@
                             <span class="input-group-addon">
                                 <i class="glyphicon glyphicon-envelope"></i>
                             </span>
-        <input ngModel
-               type="email"
-               id="email"
-               name="email"
-               #email="ngModel"
-               class="form-control"
-               placeholder="Email" appValidateEmail/>
+        <input
+          formControlName="email"
+          id="email"
+          class="form-control"
+          placeholder="Email"/>
       </div>
       <div class="err-msg-color"
-           *ngIf="email.errors && (email.dirty || email.touched || f.submitted || f.valid)">
-        <p *ngIf="email.errors?.validateEmail">
+           *ngIf="signUpForm.get('email').errors &&
+           (signUpForm.get('email').dirty ||
+           signUpForm.get('email').touched ||
+           signUpForm.submitted || signUpForm.valid)">
+        <p
+          *ngIf="signUpForm.get('email').hasError('validateEmail') && signUpForm.get('email').hasError('required')">
           Please enter a valid email address
         </p>
       </div>
@@ -71,39 +74,38 @@
                             <span class="input-group-addon">
                                 <i class="glyphicon glyphicon-user"></i>
                             </span>
-        <input ngModel
-               type="text"
-               id="username"
-               name="userName"
-               #userName="ngModel"
-               class="form-control"
-               placeholder="Username" required/>
+        <input
+          formControlName="userName"
+          id="username"
+          class="form-control"
+          placeholder="Username"/>
       </div>
       <div class="err-msg-color"
-           *ngIf="userName.errors && (userName.dirty || userName.touched || f.submitted || f.valid)">
-        <p *ngIf="userName.errors?.required">
+           *ngIf="signUpForm.get('userName').errors && (signUpForm.get('userName').dirty || signUpForm.get('userName').touched || signUpForm.submitted || signUpForm.valid)">
+        <p *ngIf="signUpForm.get('userName').hasError('required')">
           userName is required
         </p>
       </div>
     </div>
-    <div ngModelGroup="password">
+    <div formGroupName="password">
       <div class="form-group">
         <label for="password">Password</label>
         <div class="input-group">
                             <span class="input-group-addon">
                                 <i class="glyphicon glyphicon-lock"></i>
                             </span>
-          <input ngModel
+          <input formControlName="password"
                  type="password"
                  class="form-control"
-                 name="password"
                  id="password"
-                 #password="ngModel"
-                 placeholder="Password" required/>
+                 placeholder="Password"/>
         </div>
         <div class="err-msg-color"
-             *ngIf="password.errors && (password.dirty || password.touched || f.submitted || f.valid)">
-          <p *ngIf="password.errors?.required">
+             *ngIf="signUpForm.get('password').get('password').errors &&
+             (signUpForm.get('password').get('password').dirty ||
+             signUpForm.get('password').get('password').touched ||
+             signUpForm.submitted || signUpForm.valid)">
+          <p *ngIf="signUpForm.get('password').get('password').hasError('required')">
             password is required
           </p>
         </div>
@@ -115,17 +117,18 @@
                             <span class="input-group-addon">
                                 <i class="glyphicon glyphicon-lock"></i>
                             </span>
-          <input ngModel
+          <input formControlName="vpassword"
                  type="password"
-                 name="vpassword"
                  class="form-control"
                  id="vpassword"
-                 #vpassword="ngModel"
-                 placeholder="Verify Password" required/>
+                 placeholder="Verify Password"/>
         </div>
         <div class="err-msg-color"
-             *ngIf="vpassword.errors && (vpassword.dirty || vpassword.touched || f.submitted || f.valid)">
-          <p *ngIf="vpassword.errors?.required">
+             *ngIf="signUpForm.get('password').get('vpassword').errors &&
+             (signUpForm.get('password').get('vpassword').dirty ||
+             signUpForm.get('password').get('vpassword').touched ||
+             signUpForm.submitted || signUpForm.valid)">
+          <p *ngIf="signUpForm.get('password').get('vpassword').hasError('required')">
             Confirm password is required
           </p>
         </div>
@@ -133,8 +136,8 @@
     </div>
 
     <div class="form-group">
-      <!--<button type="submit" class="btn btn-primary" [disabled]="f.invalid">Sign up</button>-->
-      <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Sign up</button>
+      <!--<button type="submit" class="btn btn-primary" [disabled]="signUpForm.invalid">Sign up</button>-->
+      <button type="submit" class="btn btn-primary" [disabled]="!signUpForm.valid">Sign up</button>
     </div>
   </form>
 </div>
