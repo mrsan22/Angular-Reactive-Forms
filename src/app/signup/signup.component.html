@@ -13,7 +13,6 @@
                                 <i class="glyphicon glyphicon-user"></i>
                             </span>
           <input formControlName="firstName"
-                 type="text"
                  class="form-control"
                  id="firstname"
                  placeholder="First name" autofocus/>
@@ -25,7 +24,7 @@
           <p *ngIf="signUpForm.get('name').get('firstName').hasError('required')">
             FirstName is required
           </p>
-          <p *ngIf="signUpForm.get('name').get('firstName').hasError('minLength')">
+          <p *ngIf="signUpForm.get('name').get('firstName').hasError('minlength')">
             FirstName must have at least
             {{signUpForm.get('name').get('firstName').errors.minlength.requiredLength}} characters
           </p>
@@ -63,7 +62,8 @@
            signUpForm.get('email').touched ||
            signUpForm.submitted || signUpForm.valid)">
         <p
-          *ngIf="signUpForm.get('email').hasError('validateEmail') && signUpForm.get('email').hasError('required')">
+          *ngIf="signUpForm.get('email').hasError('validateEmail') ||
+          signUpForm.get('email').hasError('required')">
           Please enter a valid email address
         </p>
       </div>
