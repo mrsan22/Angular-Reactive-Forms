@@ -5,12 +5,12 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { SharedModule } from '../shared/shared.module';
-// import { SignUpRoutingModule } from './signup-routing.module';
+import { SignUpRoutingModule } from './signup-routing.module';
 
 @NgModule({
-  imports: [ ReactiveFormsModule, SharedModule ],
+  imports: [ ReactiveFormsModule, SharedModule, SignUpRoutingModule ],
   exports: [ReactiveFormsModule],
-  // declarations: [ SignUpRoutingModule.components ]
+  declarations: [ SignUpRoutingModule.components ]
 })
 export class SignUpModule {
 
