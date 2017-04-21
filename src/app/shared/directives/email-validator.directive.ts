@@ -2,9 +2,10 @@
  * Created by kumars13 on 4/20/17.
  */
 import {Directive} from '@angular/core';
-import {NG_VALIDATORS, FormControl} from '@angular/forms';
+import {NG_VALIDATORS, FormControl, AbstractControl} from '@angular/forms';
 
-const EMAIL_REGEXP = /^[a-z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)*$/i;
+// RFC 2822 compliant regex
+const EMAIL_REGEXP = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
 
 export function validateEmail(c: FormControl) {
   return (EMAIL_REGEXP.test(c.value) || c.value === '') ? null : {

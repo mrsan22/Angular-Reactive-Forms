@@ -14,11 +14,11 @@ export class SignupComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) {
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.buildForm();
   }
 
-  buildForm() {
+  buildForm(): void {
     this.signUpForm = this.formBuilder.group({
       name: this.formBuilder.group({
         firstName: ['', [Validators.required, Validators.minLength(2)], []],
@@ -33,7 +33,7 @@ export class SignupComponent implements OnInit {
     });
   }
 
-  onSubmit(value: IUserSignUp) {
+  onSubmit(value: IUserSignUp): void {
     console.log(value);
   }
 
