@@ -131,6 +131,9 @@
           <p *ngIf="signUpForm.get('password').get('vpassword').hasError('required')">
             Confirm password is required
           </p>
+          <p *ngIf="signUpForm.get('password').hasError('noMatch')">
+            Password must match
+          </p>
         </div>
       </div>
     </div>

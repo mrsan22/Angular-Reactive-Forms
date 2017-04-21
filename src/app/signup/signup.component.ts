@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {IUserSignUp} from '../shared/interfaces';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 import {validateEmail} from '../shared/directives/email-validator.directive';
+import {passwordMatcher} from '../shared/directives/password-matcher.directive';
 
 @Component({
   selector: 'app-signup',
@@ -29,7 +30,7 @@ export class SignupComponent implements OnInit {
       password: this.formBuilder.group({
         password: ['', [Validators.required]],
         vpassword: ['', [Validators.required]]
-      })
+      }, {validator: passwordMatcher})
     });
   }
 

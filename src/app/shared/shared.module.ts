@@ -6,11 +6,12 @@ import { CommonModule } from '@angular/common';
 
 
 import { EmailValidatorDirective } from './directives/email-validator.directive';
+import {PasswordMatchDirective} from './directives/password-matcher.directive';
 
 @NgModule({
   imports: [CommonModule],
-  exports: [EmailValidatorDirective, CommonModule],
-  declarations: [EmailValidatorDirective]
+  exports: [EmailValidatorDirective, CommonModule, PasswordMatchDirective],
+  declarations: [EmailValidatorDirective, PasswordMatchDirective]
 })
 
 export class SharedModule {
