@@ -1,5 +1,5 @@
 /**
- * Signup Form for the user
+ * Signup Component for the user
  */
 import {Component, OnInit} from '@angular/core';
 import {IUserSignUp} from '../shared/interfaces';
@@ -12,6 +12,9 @@ import {passwordMatcher} from '../shared/directives/password-matcher.directive';
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
+/**
+ * SignupComponent class
+ */
 export class SignupComponent implements OnInit {
   signUpForm: FormGroup;
 
@@ -22,6 +25,10 @@ export class SignupComponent implements OnInit {
     this.buildForm();
   }
 
+  /**
+   * function to build reactive form
+   * @returns void
+   */
   buildForm(): void {
     this.signUpForm = this.formBuilder.group({
       name: this.formBuilder.group({
