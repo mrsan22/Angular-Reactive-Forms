@@ -1,3 +1,6 @@
+/**
+ * Signup Form for the user
+ */
 import {Component, OnInit} from '@angular/core';
 import {IUserSignUp} from '../shared/interfaces';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
