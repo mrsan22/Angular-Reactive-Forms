@@ -6,11 +6,13 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { NavbarComponent } from './navbar/navbar.component';
 import {EnsureModuleLoadedOnceGuard} from './module-import-guard';
 
+import { MockBackendService } from './services/mock-backend.service';
+
 @NgModule({
   imports: [],
   exports: [ NavbarComponent ],
   declarations: [ NavbarComponent ],
-  providers: [ ] // these should be singleton
+  providers: [ MockBackendService ] // these should be singleton
 })
 export class CoreModule extends EnsureModuleLoadedOnceGuard {    // Ensure that CoreModule is
 // only loaded into AppModule
