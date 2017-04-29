@@ -22,17 +22,20 @@ export class MockBackendService {
       if (c.request.url.endsWith('/api/signup') && c.request.method === RequestMethod.Post) {
         // get body content from a Post request
         const newUser: IUserSignUp = JSON.parse(c.request.getBody());
+        console.log(newUser);
         // validation to check duplicate user
+        console.log(USERS);
         const duplicateUser = USERS.filter(user => {
           return user.userName === newUser.userName;
         });
+        console.log(duplicateUser);
         if (duplicateUser.length) {
           // return c.mockError(new Error('Username' + ' ' + newUser.userName + ' ' + 'is already taken'));
           return c.mockRespond(new Response(new ResponseOptions({
             body: JSON.stringify({
               status: 400,
               success: false,
-              message: c.mockError(new Error('Username' + ' ' + newUser.userName + ' ' + 'is already taken'))
+              message: 'Username' + ' ' + newUser.userName + ' ' + 'is already taken'
             })
           })));
         }

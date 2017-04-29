@@ -12,6 +12,7 @@ import { CoreModule } from './core/core.module';
 
 /* Routing Module */
 import { AppRoutingModule } from './app-routing.module';
+import {MockBackendService} from './core/services/mock-backend.service';
 
 
 @NgModule({
