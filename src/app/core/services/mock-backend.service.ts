@@ -61,7 +61,7 @@ export class MockBackendService {
         });
         if (checkUser.length) {
           const user: IUserSignUp = checkUser[0];
-          // repsond 200 ok
+          // respond 200 ok
           c.mockRespond(new Response(new ResponseOptions({
             body: JSON.stringify({
               id: user.id,

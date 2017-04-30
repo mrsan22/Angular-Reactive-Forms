@@ -1,21 +1,23 @@
 <nav class="navbar navbar-inverse navbar-static-top">
-    <div class="container-fluid">
-        <div class="navbar-header" style="">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" routerLink="/signup">
-                <span class="app-title" aria-hidden="true">Reactive Forms</span>
-            </a>
-            <div class="navbar-collapse">
-                <!--<ul class="nav navbar-nav nav-pills">-->
-                    <!--<li routerLinkActive="active"><a routerLink="/signup">Signup</a></li>-->
-                <!--</ul>-->
-            </div>
-        </div>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#navbar"
+              aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" routerLinkActive="active" routerLink="/signup">
+        <span class="app-title" aria-hidden="true">Reactive Forms</span>
+      </a>
     </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li routerLinkActive="active"><a routerLink="/signup">Signup</a></li>
+        <li routerLinkActive="active"><a routerLink="/signup">Login</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
