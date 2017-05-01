@@ -81,7 +81,8 @@
           placeholder="Username"/>
       </div>
       <div class="err-msg-color"
-           *ngIf="signUpForm.get('userName').errors && (signUpForm.get('userName').dirty || signUpForm.get('userName').touched || signUpForm.submitted || signUpForm.valid)">
+           *ngIf="signUpForm.get('userName').errors && (signUpForm.get('userName').dirty
+           || signUpForm.get('userName').touched || signUpForm.submitted || signUpForm.valid)">
         <p *ngIf="signUpForm.get('userName').hasError('required')">
           userName is required
         </p>

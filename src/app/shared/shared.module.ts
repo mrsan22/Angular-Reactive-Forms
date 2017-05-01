@@ -3,15 +3,15 @@
  */
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import {ReactiveFormsModule} from '@angular/forms';
 
 import { EmailValidatorDirective } from './directives/email-validator.directive';
 import {PasswordMatchDirective} from './directives/password-matcher.directive';
 
 
 @NgModule({
-  imports: [CommonModule],
-  exports: [EmailValidatorDirective, CommonModule, PasswordMatchDirective],
+  imports: [CommonModule, ReactiveFormsModule],
+  exports: [EmailValidatorDirective, CommonModule, PasswordMatchDirective, ReactiveFormsModule],
   declarations: [EmailValidatorDirective, PasswordMatchDirective]
 })
 
