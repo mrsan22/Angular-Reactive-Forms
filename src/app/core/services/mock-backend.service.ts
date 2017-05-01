@@ -45,42 +45,6 @@ export class MockBackendService {
         })));
         return;
       }
-
-      //
-      // if (c.request.url.endsWith('/api/auth/login') && c.request.method === RequestMethod.Post) {
-      //   // get user details from post request
-      //   const userDetails: IUserLogin = JSON.parse(c.request.getBody());
-      //   // check if login credentials matches to any user
-      //   const checkUser: Array<IUserSignUp> = USERS.filter(user => {
-      //     return user.password.password === userDetails.userCredentials.password;
-      //   });
-      //   console.log(checkUser);
-      //   if (checkUser.length) {
-      //     const user: IUserSignUp = checkUser[0];
-      //     // respond 200 ok
-      //     c.mockRespond(new Response(new ResponseOptions({
-      //       body: JSON.stringify({
-      //         id: user.id,
-      //         username: user.userName,
-      //         firstName: user.name.firstName,
-      //         lastName: user.name.lastName,
-      //         token: 'fake-jwt-token',
-      //         status: 200,
-      //         success: true
-      //       })
-      //     })));
-      //   } else {
-      //     // return 401 Unauthorized
-      //     return c.mockRespond(new Response(new ResponseOptions({
-      //       body: JSON.stringify({
-      //         status: 401,
-      //         success: false,
-      //         message: 'Username or password is incorrect'
-      //       })
-      //     })));
-      //   }
-      //   return;
-      // }
     });
   }
 
