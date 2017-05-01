@@ -2,6 +2,7 @@
  * Created by kumars13 on 4/21/17.
  */
 import {NgModule, Optional, SkipSelf} from '@angular/core';
+import {RouterModule} from '@angular/router';
 
 import {NavbarComponent} from './navbar/navbar.component';
 import {EnsureModuleLoadedOnceGuard} from './module-import-guard';
@@ -11,9 +12,10 @@ import {UserService} from './services/user.service';
 import {BaseRequestOptions, Http} from '@angular/http';
 import {MockBackend} from '@angular/http/testing';
 
+
 @NgModule({
-  imports: [],
-  exports: [NavbarComponent],
+  imports: [RouterModule],
+  exports: [NavbarComponent, RouterModule],
   declarations: [NavbarComponent],
   // these should be singleton
   providers: [
