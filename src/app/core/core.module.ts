@@ -11,6 +11,7 @@ import {MockBackendService} from './services/mock-backend.service';
 import {UserService} from './services/user.service';
 import {BaseRequestOptions, Http} from '@angular/http';
 import {MockBackend} from '@angular/http/testing';
+import {AuthService} from './services/auth.service';
 
 
 @NgModule({
@@ -19,7 +20,6 @@ import {MockBackend} from '@angular/http/testing';
   declarations: [NavbarComponent],
   // these should be singleton
   providers: [
-    MockBackendService,
     MockBackend,
     BaseRequestOptions,
     {
@@ -29,7 +29,8 @@ import {MockBackend} from '@angular/http/testing';
         return new Http(backend, options);
       }
     },
-    UserService
+    UserService,
+    AuthService
   ]
 })
 export class CoreModule extends EnsureModuleLoadedOnceGuard {    // Ensure that CoreModule is

@@ -13,7 +13,7 @@ import {UserService} from '../core/services/user.service';
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css'],
-  providers: [UserService]
+  providers: [MockBackendService]
 })
 /**
  * SignupComponent class
@@ -22,10 +22,10 @@ export class SignupComponent implements OnInit {
   signUpForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder,
-              private mockBackendDService: MockBackendService,
+              private mockBackendService: MockBackendService,
               private userService: UserService
   ) {
-    this.mockBackendDService.start();
+    this.mockBackendService.start();
   }
 
   ngOnInit(): void {

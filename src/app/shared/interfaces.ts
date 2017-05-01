@@ -18,6 +18,8 @@ export interface IUserSignUp {
 
 // login user structure
 export interface IUserLogin {
-  username: string;
-  password: string;
+  userCredentials: {
+    username: string;
+    password: string;
+  };
 }

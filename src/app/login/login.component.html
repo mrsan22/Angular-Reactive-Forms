@@ -20,7 +20,7 @@
              loginForm.get('userCredentials').get('userName').touched ||
              loginForm.submitted || loginForm.valid)">
           <p *ngIf="loginForm.get('userCredentials').get('userName').hasError('required')">
-            userName is required
+            UserName is required
           </p>
         </div>
       </div>
@@ -41,7 +41,7 @@
              loginForm.get('userCredentials').get('password').touched ||
              loginForm.submitted || loginForm.valid)">
           <p *ngIf="loginForm.get('userCredentials').get('password').hasError('required')">
-            password is required
+            Password is required
           </p>
         </div>
       </div>
