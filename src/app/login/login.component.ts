@@ -31,6 +31,9 @@ export class LoginComponent implements OnInit {
     this.buildForm();
   }
 
+  /**
+   * This function builds the reactive form for Login screen and applies the Validators
+   */
   buildForm(): void {
     this.loginForm = this.formBuilder.group({
       userCredentials: this.formBuilder.group({
@@ -40,7 +43,12 @@ export class LoginComponent implements OnInit {
     });
   }
 
-
+  /**
+   * This function takes the user credentials as Input and calls the login auth service to check if user is
+   * authorized to login.
+   * @param {IUserLogin} userCredentials
+   * @returns void
+   */
   onSubmit(userCredentials: IUserLogin): void {
     this.authService
       .login(userCredentials)
