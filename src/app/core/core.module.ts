@@ -12,14 +12,16 @@ import {UserService} from './services/user.service';
 import {BaseRequestOptions, Http} from '@angular/http';
 import {MockBackend} from '@angular/http/testing';
 import {AuthService} from './services/auth.service';
+import {ToastModule} from './toast/toast.module';
 
 
 @NgModule({
-  imports: [RouterModule],
-  exports: [NavbarComponent, RouterModule],
+  imports: [RouterModule, ToastModule],
+  exports: [NavbarComponent, RouterModule, ToastModule],
   declarations: [NavbarComponent],
   // these should be singleton
   providers: [
+    MockBackendService,
     MockBackend,
     BaseRequestOptions,
     {

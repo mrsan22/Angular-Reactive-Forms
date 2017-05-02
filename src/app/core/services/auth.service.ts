@@ -23,13 +23,13 @@ export class AuthService {
     this.authChanged.emit(status);
   }
 
-  login(user: IUserLogin): Observable<boolean> {
+  login(user: IUserLogin): Observable<JSON> {
     return this.http
       .post(this.authUrl + '/login', user)
       .map((response: Response) => {
         const loggedInJson = response.json();
         this.isAuthenticated = loggedInJson.success;
-        this.userAuthChanged(loggedInJson);
+        this.userAuthChanged(loggedInJson.success);
         return loggedInJson;
       })
       .do(data => console.log(data))

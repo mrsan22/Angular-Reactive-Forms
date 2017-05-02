@@ -13,7 +13,7 @@ import {UserService} from '../core/services/user.service';
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css'],
-  providers: [MockBackendService]
+  providers: []
 })
 /**
  * SignupComponent class
