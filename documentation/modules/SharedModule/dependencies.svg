@@ -26,7 +26,7 @@
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_SharedModule_declarations</title>
-<polygon fill="none" stroke="#000000" points="424,-143 424,-195 770,-195 770,-143 424,-143"/>
+<polygon fill="none" stroke="#000000" points="483,-143 483,-195 829,-195 829,-143 483,-143"/>
 </g>
 <g id="clust3" class="cluster">
 <title>cluster_SharedModule_EmailValidatorDirective_providers</title>
@@ -38,77 +38,89 @@
 </g>
 <g id="clust5" class="cluster">
 <title>cluster_SharedModule_imports</title>
-<polygon fill="none" stroke="#000000" points="288,-143 288,-195 416,-195 416,-143 288,-143"/>
+<polygon fill="none" stroke="#000000" points="185,-143 185,-195 475,-195 475,-143 185,-143"/>
 </g>
 <g id="clust6" class="cluster">
 <title>cluster_SharedModule_exports</title>
-<polygon fill="none" stroke="#000000" points="266,-273 266,-325 753,-325 753,-273 266,-273"/>
+<polygon fill="none" stroke="#000000" points="158,-273 158,-325 810,-325 810,-273 158,-273"/>
 </g>
 <!-- EmailValidatorDirective -->
 <g id="node1" class="node">
 <title>EmailValidatorDirective</title>
-<polygon fill="#ffffb3" stroke="#000000" points="762.3905,-187 607.6095,-187 607.6095,-151 762.3905,-151 762.3905,-187"/>
-<text text-anchor="middle" x="685" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">EmailValidatorDirective</text>
+<polygon fill="#ffffb3" stroke="#000000" points="821.3905,-187 666.6095,-187 666.6095,-151 821.3905,-151 821.3905,-187"/>
+<text text-anchor="middle" x="744" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">EmailValidatorDirective</text>
 </g>
 <!-- SharedModule -->
 <g id="node3" class="node">
 <title>SharedModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="560.4231,-252 557.4231,-256 536.4231,-256 533.4231,-252 461.5769,-252 461.5769,-216 560.4231,-216 560.4231,-252"/>
-<text text-anchor="middle" x="511" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">SharedModule</text>
+<polygon fill="#8dd3c7" stroke="#000000" points="539.4231,-252 536.4231,-256 515.4231,-256 512.4231,-252 440.5769,-252 440.5769,-216 539.4231,-216 539.4231,-252"/>
+<text text-anchor="middle" x="490" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">SharedModule</text>
 </g>
 <!-- EmailValidatorDirective&#45;&gt;SharedModule -->
 <g id="edge1" class="edge">
 <title>EmailValidatorDirective&#45;&gt;SharedModule</title>
-<path fill="none" stroke="#000000" d="M676.375,-187.0225C676.375,-204.3734 676.375,-228 676.375,-228 676.375,-228 570.618,-228 570.618,-228"/>
-<polygon fill="#000000" stroke="#000000" points="570.618,-224.5001 560.618,-228 570.6179,-231.5001 570.618,-224.5001"/>
+<path fill="none" stroke="#000000" d="M734.375,-187.0225C734.375,-204.3734 734.375,-228 734.375,-228 734.375,-228 549.4529,-228 549.4529,-228"/>
+<polygon fill="#000000" stroke="#000000" points="549.453,-224.5001 539.4529,-228 549.4529,-231.5001 549.453,-224.5001"/>
 </g>
 <!-- PasswordMatchDirective -->
 <g id="node2" class="node">
 <title>PasswordMatchDirective</title>
-<polygon fill="#ffffb3" stroke="#000000" points="589.5016,-187 432.4984,-187 432.4984,-151 589.5016,-151 589.5016,-187"/>
-<text text-anchor="middle" x="511" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">PasswordMatchDirective</text>
+<polygon fill="#ffffb3" stroke="#000000" points="648.5016,-187 491.4984,-187 491.4984,-151 648.5016,-151 648.5016,-187"/>
+<text text-anchor="middle" x="570" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">PasswordMatchDirective</text>
 </g>
 <!-- PasswordMatchDirective&#45;&gt;SharedModule -->
 <g id="edge3" class="edge">
 <title>PasswordMatchDirective&#45;&gt;SharedModule</title>
-<path fill="none" stroke="#000000" d="M511,-187.1061C511,-187.1061 511,-205.991 511,-205.991"/>
-<polygon fill="#000000" stroke="#000000" points="507.5001,-205.9909 511,-215.991 514.5001,-205.991 507.5001,-205.9909"/>
+<path fill="none" stroke="#000000" d="M515.2304,-187.1061C515.2304,-187.1061 515.2304,-205.991 515.2304,-205.991"/>
+<polygon fill="#000000" stroke="#000000" points="511.7304,-205.9909 515.2304,-215.991 518.7304,-205.991 511.7304,-205.9909"/>
 </g>
 <!-- EmailValidatorDirective  -->
-<g id="node7" class="node">
+<g id="node8" class="node">
 <title>EmailValidatorDirective </title>
-<polygon fill="#fb8072" stroke="#000000" points="744.89,-317 587.11,-317 587.11,-281 744.89,-281 744.89,-317"/>
-<text text-anchor="middle" x="666" y="-294.8" font-family="Times,serif" font-size="14.00" fill="#000000">EmailValidatorDirective </text>
+<polygon fill="#fb8072" stroke="#000000" points="801.89,-317 644.11,-317 644.11,-281 801.89,-281 801.89,-317"/>
+<text text-anchor="middle" x="723" y="-294.8" font-family="Times,serif" font-size="14.00" fill="#000000">EmailValidatorDirective </text>
 </g>
 <!-- SharedModule&#45;&gt;EmailValidatorDirective  -->
-<g id="edge6" class="edge">
+<g id="edge7" class="edge">
 <title>SharedModule&#45;&gt;EmailValidatorDirective </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M560.4204,-240C581.3102,-240 600.8992,-240 600.8992,-240 600.8992,-240 600.8992,-270.9775 600.8992,-270.9775"/>
-<polygon fill="#000000" stroke="#000000" points="597.3993,-270.9774 600.8992,-280.9775 604.3993,-270.9775 597.3993,-270.9774"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M539.4314,-240C588.9217,-240 657.7777,-240 657.7777,-240 657.7777,-240 657.7777,-270.9775 657.7777,-270.9775"/>
+<polygon fill="#000000" stroke="#000000" points="654.2778,-270.9774 657.7777,-280.9775 661.2778,-270.9775 654.2778,-270.9774"/>
 </g>
 <!-- CommonModule  -->
-<g id="node8" class="node">
+<g id="node9" class="node">
 <title>CommonModule </title>
-<polygon fill="#fb8072" stroke="#000000" points="568.6677,-317 453.3323,-317 453.3323,-281 568.6677,-281 568.6677,-317"/>
-<text text-anchor="middle" x="511" y="-294.8" font-family="Times,serif" font-size="14.00" fill="#000000">CommonModule </text>
+<polygon fill="#fb8072" stroke="#000000" points="625.6677,-317 510.3323,-317 510.3323,-281 625.6677,-281 625.6677,-317"/>
+<text text-anchor="middle" x="568" y="-294.8" font-family="Times,serif" font-size="14.00" fill="#000000">CommonModule </text>
 </g>
 <!-- SharedModule&#45;&gt;CommonModule  -->
-<g id="edge7" class="edge">
+<g id="edge8" class="edge">
 <title>SharedModule&#45;&gt;CommonModule </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M511,-252.1061C511,-252.1061 511,-270.991 511,-270.991"/>
-<polygon fill="#000000" stroke="#000000" points="507.5001,-270.9909 511,-280.991 514.5001,-270.991 507.5001,-270.9909"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M524.8137,-252.1061C524.8137,-252.1061 524.8137,-270.991 524.8137,-270.991"/>
+<polygon fill="#000000" stroke="#000000" points="521.3137,-270.9909 524.8137,-280.991 528.3137,-270.991 521.3137,-270.9909"/>
 </g>
 <!-- PasswordMatchDirective  -->
-<g id="node9" class="node">
+<g id="node10" class="node">
 <title>PasswordMatchDirective </title>
-<polygon fill="#fb8072" stroke="#000000" points="435.5008,-317 274.4992,-317 274.4992,-281 435.5008,-281 435.5008,-317"/>
-<text text-anchor="middle" x="355" y="-294.8" font-family="Times,serif" font-size="14.00" fill="#000000">PasswordMatchDirective </text>
+<polygon fill="#fb8072" stroke="#000000" points="492.5008,-317 331.4992,-317 331.4992,-281 492.5008,-281 492.5008,-317"/>
+<text text-anchor="middle" x="412" y="-294.8" font-family="Times,serif" font-size="14.00" fill="#000000">PasswordMatchDirective </text>
 </g>
 <!-- SharedModule&#45;&gt;PasswordMatchDirective  -->
-<g id="edge8" class="edge">
+<g id="edge9" class="edge">
 <title>SharedModule&#45;&gt;PasswordMatchDirective </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M461.5282,-240C440.1946,-240 420.0417,-240 420.0417,-240 420.0417,-240 420.0417,-270.9775 420.0417,-270.9775"/>
-<polygon fill="#000000" stroke="#000000" points="416.5418,-270.9774 420.0417,-280.9775 423.5418,-270.9775 416.5418,-270.9774"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M466.6447,-252.1061C466.6447,-252.1061 466.6447,-270.991 466.6447,-270.991"/>
+<polygon fill="#000000" stroke="#000000" points="463.1447,-270.9909 466.6447,-280.991 470.1447,-270.991 463.1447,-270.9909"/>
+</g>
+<!-- ReactiveFormsModule  -->
+<g id="node11" class="node">
+<title>ReactiveFormsModule </title>
+<polygon fill="#fb8072" stroke="#000000" points="313.8045,-317 166.1955,-317 166.1955,-281 313.8045,-281 313.8045,-317"/>
+<text text-anchor="middle" x="240" y="-294.8" font-family="Times,serif" font-size="14.00" fill="#000000">ReactiveFormsModule </text>
+</g>
+<!-- SharedModule&#45;&gt;ReactiveFormsModule  -->
+<g id="edge10" class="edge">
+<title>SharedModule&#45;&gt;ReactiveFormsModule </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M440.6837,-240C371.3357,-240 253.375,-240 253.375,-240 253.375,-240 253.375,-270.9775 253.375,-270.9775"/>
+<polygon fill="#000000" stroke="#000000" points="249.8751,-270.9774 253.375,-280.9775 256.8751,-270.9775 249.8751,-270.9774"/>
 </g>
 <!-- { provide: NG_VALIDATORS, useValue: validateEmail, multi: &#160;} -->
 <g id="node4" class="node">
@@ -119,8 +131,8 @@
 <!-- { provide: NG_VALIDATORS, useValue: validateEmail, multi: &#160;}&#45;&gt;EmailValidatorDirective -->
 <g id="edge2" class="edge">
 <title>{ provide: NG_VALIDATORS, useValue: validateEmail, multi: &#160;}&#45;&gt;EmailValidatorDirective</title>
-<path fill="none" stroke="#000000" d="M690.1042,-116.5327C690.1042,-116.5327 690.1042,-140.8507 690.1042,-140.8507"/>
-<polygon fill="#000000" stroke="#000000" points="686.6043,-140.8506 690.1042,-150.8507 693.6043,-140.8507 686.6043,-140.8506"/>
+<path fill="none" stroke="#000000" d="M744,-119.4041C744,-119.4041 744,-140.9397 744,-140.9397"/>
+<polygon fill="#000000" stroke="#000000" points="740.5001,-140.9397 744,-150.9397 747.5001,-140.9398 740.5001,-140.9397"/>
 </g>
 <!-- { provide: NG_VALIDATORS, useValue: passwordMatcher, multi: &#160;} -->
 <g id="node5" class="node">
@@ -131,20 +143,32 @@
 <!-- { provide: NG_VALIDATORS, useValue: passwordMatcher, multi: &#160;}&#45;&gt;PasswordMatchDirective -->
 <g id="edge4" class="edge">
 <title>{ provide: NG_VALIDATORS, useValue: passwordMatcher, multi: &#160;}&#45;&gt;PasswordMatchDirective</title>
-<path fill="none" stroke="#000000" d="M511,-116.8419C511,-116.8419 511,-140.5231 511,-140.5231"/>
-<polygon fill="#000000" stroke="#000000" points="507.5001,-140.523 511,-150.5231 514.5001,-140.5231 507.5001,-140.523"/>
+<path fill="none" stroke="#000000" d="M542.6215,-114.4434C542.6215,-114.4434 542.6215,-140.9681 542.6215,-140.9681"/>
+<polygon fill="#000000" stroke="#000000" points="539.1216,-140.968 542.6215,-150.9681 546.1216,-140.9681 539.1216,-140.968"/>
 </g>
 <!-- CommonModule -->
 <g id="node6" class="node">
 <title>CommonModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="407.6681,-187 404.6681,-191 383.6681,-191 380.6681,-187 296.3319,-187 296.3319,-151 407.6681,-151 407.6681,-187"/>
-<text text-anchor="middle" x="352" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">CommonModule</text>
+<polygon fill="#8dd3c7" stroke="#000000" points="466.6681,-187 463.6681,-191 442.6681,-191 439.6681,-187 355.3319,-187 355.3319,-151 466.6681,-151 466.6681,-187"/>
+<text text-anchor="middle" x="411" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">CommonModule</text>
 </g>
 <!-- CommonModule&#45;&gt;SharedModule -->
 <g id="edge5" class="edge">
 <title>CommonModule&#45;&gt;SharedModule</title>
-<path fill="none" stroke="#000000" d="M352,-187.0225C352,-204.3734 352,-228 352,-228 352,-228 451.563,-228 451.563,-228"/>
-<polygon fill="#000000" stroke="#000000" points="451.563,-231.5001 461.563,-228 451.5629,-224.5001 451.563,-231.5001"/>
+<path fill="none" stroke="#000000" d="M453.8114,-187.1061C453.8114,-187.1061 453.8114,-205.991 453.8114,-205.991"/>
+<polygon fill="#000000" stroke="#000000" points="450.3114,-205.9909 453.8114,-215.991 457.3114,-205.991 450.3114,-205.9909"/>
+</g>
+<!-- ReactiveFormsModule -->
+<g id="node7" class="node">
+<title>ReactiveFormsModule</title>
+<polygon fill="#8dd3c7" stroke="#000000" points="337.3047,-187 334.3047,-191 313.3047,-191 310.3047,-187 192.6953,-187 192.6953,-151 337.3047,-151 337.3047,-187"/>
+<text text-anchor="middle" x="265" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">ReactiveFormsModule</text>
+</g>
+<!-- ReactiveFormsModule&#45;&gt;SharedModule -->
+<g id="edge6" class="edge">
+<title>ReactiveFormsModule&#45;&gt;SharedModule</title>
+<path fill="none" stroke="#000000" d="M322.7009,-187.0225C322.7009,-204.3734 322.7009,-228 322.7009,-228 322.7009,-228 430.7096,-228 430.7096,-228"/>
+<polygon fill="#000000" stroke="#000000" points="430.7096,-231.5001 440.7096,-228 430.7096,-224.5001 430.7096,-231.5001"/>
 </g>
 </g>
 </svg>
