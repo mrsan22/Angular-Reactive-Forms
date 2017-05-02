@@ -4,7 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 This project is about 'me' learning to create [Angular Reactive Forms](https://angular.io/docs/ts/latest/guide/reactive-forms.html) by following offical style guide and best practices. It has a simple signup/login page with very basic functionalities. However, I have tried to follow best practices and somethings may seem overkill (like creating Routing Module) for such a small project. Though the main focus of this project is 'Switching from Template driven forms to Reactive forms', it also has some other cool things. So, check it out and feel free to fork, update, plug in your project etc.
 
 ### Highlights
-* Small baby commits to show *how to transform the template driven forms to reactive forms*
+* Small baby commits to show *how to transform the template driven forms to reactive forms*.
+* Form Validation with custom directives and validators using FormControl/AbstractControl.
 * Using [MockBackend](https://angular.io/docs/ts/latest/api/http/testing/index/MockBackend-class.html) to fake backend services for the api calls.
 * The project structure follows [Angular style guide](https://angular.io/styleguide#!#04-06) and other best practices.
 
