@@ -9,7 +9,6 @@ import {IUserLogin, IUserSignUp} from '../../shared/interfaces';
 
 @Injectable()
 export class MockBackendService {
-  // array in local storage for registered users
 
   constructor(private backend: MockBackend) {
 
@@ -32,6 +31,7 @@ export class MockBackendService {
             body: JSON.stringify({
               status: 400,
               success: false,
+              userName: newUser.userName,
               message: 'Username' + ' ' + newUser.userName + ' ' + 'is already taken'
             })
           })));
@@ -82,6 +82,21 @@ export class MockBackendService {
             })
           })));
         }
+        return;
+      }
+    });
+  }
+    logout(): void {
+    this.backend.connections.subscribe((c: MockConnection) => {
+      if (c.request.url.endsWith('/api/auth/logout') && c.request.method === RequestMethod.Post) {
+          // respond 200 ok
+          c.mockRespond(new Response(new ResponseOptions({
+            body: JSON.stringify({
+              token: 'fake-jwt-token',
+              status: 200,
+              success: false
+            })
+          })));
         return;
       }
     });

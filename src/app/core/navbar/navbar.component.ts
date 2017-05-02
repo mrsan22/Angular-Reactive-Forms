@@ -3,6 +3,7 @@ import {Subscription} from 'rxjs/Subscription';
 import {AuthService} from '../services/auth.service';
 import {ToastService} from '../toast/toast.service';
 import {Router} from '@angular/router';
+import {MockBackendService} from '../services/mock-backend.service';
 
 @Component({
   selector: 'app-navbar',
@@ -15,7 +16,9 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   constructor(private authservice: AuthService,
               private toastService: ToastService,
+              private mockbackendService: MockBackendService,
               private router: Router) {
+    this.mockbackendService.logout();
   }
 
   ngOnInit() {
@@ -37,7 +40,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
         .subscribe((status: boolean) => {
             this.setLoginLogoutText();
             this.toastService.activate('Logged Out');
-            // this.router.navigate(['/home']);
+            this.router.navigate(['/signup']);
             return;
           },
           (err: any) => console.log(err));

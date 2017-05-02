@@ -7,6 +7,7 @@ import {AuthService} from '../core/services/auth.service';
 import {MockBackendService} from '../core/services/mock-backend.service';
 import {ToastService} from '../core/toast/toast.service';
 import {Observable} from 'rxjs/Observable';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -20,6 +21,7 @@ export class LoginComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,
               private authService: AuthService,
               private mockBackendService: MockBackendService,
+              private router: Router,
               private toastService: ToastService
   ) {
     this.mockBackendService.auth();
@@ -47,6 +49,7 @@ export class LoginComponent implements OnInit {
         (data) => {
           if (data['success']) {
             this.toastService.activate(`Successfully logged in`);
+            this.router.navigate(['/home']);
           } else {
             this.toastService.activate(`Username or Password didn't match!`);
           }

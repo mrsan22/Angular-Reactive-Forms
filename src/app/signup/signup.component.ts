@@ -4,10 +4,15 @@
 import {Component, OnInit} from '@angular/core';
 import {IUserSignUp} from '../shared/interfaces';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
+
+
 import {validateEmail} from '../shared/directives/email-validator.directive';
 import {passwordMatcher} from '../shared/directives/password-matcher.directive';
 import {MockBackendService} from '../core/services/mock-backend.service';
 import {UserService} from '../core/services/user.service';
+import {ToastService} from '../core/toast/toast.service';
+
 
 @Component({
   selector: 'app-signup',
@@ -23,6 +28,8 @@ export class SignupComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
               private mockBackendService: MockBackendService,
+              private router: Router,
+              private toastService: ToastService,
               private userService: UserService
   ) {
     this.mockBackendService.start();
@@ -52,13 +59,17 @@ export class SignupComponent implements OnInit {
   }
 
   onSubmit(value: IUserSignUp): void {
-    console.log(value);
     this.userService
       .create(value)
       .subscribe(
                 // the first argument is a function which runs on success
                 (data) => {
-                  console.log(data);
+                  if (data['success']) {
+                    this.toastService.activate(`Signup successful!`);
+                    this.router.navigate(['/login']);
+                  } else {
+                    this.toastService.activate('Username' + ' ' + data['newUser'].userName + ' ' + 'is already taken');
+                  }
                 },
                 // the second argument is a function which runs on error
                 (err) => {

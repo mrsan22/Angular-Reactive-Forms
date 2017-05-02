@@ -40,10 +40,10 @@ export class AuthService {
     return this.http.post(this.authUrl + '/logout', null)
       .map((response: Response) => {
         const loggedOut = response.json();
-        this.isAuthenticated = !loggedOut;
+        this.isAuthenticated = loggedOut.success;
          // Return loggedIn status
-        this.userAuthChanged(!loggedOut);
-        return status;
+        this.userAuthChanged(loggedOut.success);
+        return this.isAuthenticated;
       })
       .catch(this.handleError);
   }

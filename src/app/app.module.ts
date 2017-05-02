@@ -14,6 +14,7 @@ import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app-routing.module';
 import {MockBackendService} from './core/services/mock-backend.service';
 import {LoginModule} from './login/login.module';
+import {HomeModule} from './home/home.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {LoginModule} from './login/login.module';
   imports: [
     BrowserModule,
     HttpModule,
-    SignUpModule, // Eagerly loaded as it's starting point
+    HomeModule, // Eagerly loaded as it's starting point
+    SignUpModule, // Eagerly loaded as it may be starting point
     LoginModule, // Eagerly loaded as we may need to go right here
     AppRoutingModule, // Main routes for application
     SharedModule, // Shared (multi-instance) objects
