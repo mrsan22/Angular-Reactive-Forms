@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
 
 import {validateEmail} from '../shared/directives/email-validator.directive';
 import {passwordMatcher} from '../shared/directives/password-matcher.directive';
-import {MockBackendService} from '../core/services/mock-backend.service';
+import {MockBackendService} from '../core/services/backend/mock-backend.service';
 import {UserService} from '../core/services/user.service';
 import {ToastService} from '../core/toast/toast.service';
 

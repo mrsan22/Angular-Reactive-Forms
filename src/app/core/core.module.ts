@@ -7,7 +7,7 @@ import {RouterModule} from '@angular/router';
 import {NavbarComponent} from './navbar/navbar.component';
 import {EnsureModuleLoadedOnceGuard} from './module-import-guard';
 
-import {MockBackendService} from './services/mock-backend.service';
+import {MockBackendService} from './services/backend/mock-backend.service';
 import {UserService} from './services/user.service';
 import {BaseRequestOptions, Http} from '@angular/http';
 import {MockBackend} from '@angular/http/testing';

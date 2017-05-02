@@ -3,7 +3,7 @@ import {Subscription} from 'rxjs/Subscription';
 import {AuthService} from '../services/auth.service';
 import {ToastService} from '../toast/toast.service';
 import {Router} from '@angular/router';
-import {MockBackendService} from '../services/mock-backend.service';
+import {MockBackendService} from '../services/backend/mock-backend.service';
 
 @Component({
   selector: 'app-navbar',

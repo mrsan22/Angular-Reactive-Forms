@@ -4,8 +4,8 @@
 import {Injectable} from '@angular/core';
 import {MockBackend, MockConnection} from '@angular/http/testing';
 import {ResponseOptions, Response, RequestMethod, Http, BaseRequestOptions} from '@angular/http';
-import {USERS} from '../../shared/models/user.model';
-import {IUserLogin, IUserSignUp} from '../../shared/interfaces';
+import {USERS} from '../../../shared/models/user.model';
+import {IUserLogin, IUserSignUp} from '../../../shared/interfaces';
 
 @Injectable()
 export class MockBackendService {
