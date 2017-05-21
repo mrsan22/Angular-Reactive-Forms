@@ -14,6 +14,9 @@ import {MockBackend} from '@angular/http/testing';
 import {AuthService} from './services/auth.service';
 import {ToastModule} from './toast/toast.module';
 
+export function httpFactory(backend: MockBackend, options: BaseRequestOptions) {
+  return new Http(backend, options);
+}
 
 @NgModule({
   imports: [RouterModule, ToastModule],
@@ -27,14 +30,13 @@ import {ToastModule} from './toast/toast.module';
     {
       provide: Http,
       deps: [MockBackend, BaseRequestOptions],
-      useFactory: (backend: MockBackend, options: BaseRequestOptions) => {
-        return new Http(backend, options);
-      }
+      useFactory: httpFactory
     },
     UserService,
     AuthService
   ]
 })
+
 export class CoreModule extends EnsureModuleLoadedOnceGuard {    // Ensure that CoreModule is
 // only loaded into AppModule
 
